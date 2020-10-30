@@ -1,4 +1,5 @@
 #begin document test_0
+#Text		Target		Pred
 Japanese		(0|(1)		(0|(1)
 investors		0)		0)
 nearly		_		_
