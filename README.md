@@ -2,9 +2,9 @@
 
 Sequence to Sequence Coreference Resolution for English, using a Transformer.
 
-Code and model available soon.
+Code and readme available soon.
 
-datasets not provided, you can find them at:
+datasets not provided here, you can find them at:
 
 - [ARRAU dataset](https://catalog.ldc.upenn.edu/LDC2013T22)
 
