@@ -2,7 +2,7 @@
 
 Sequence to Sequence Coreference Resolution for English, using a Transformer.
 
-We used sequence to sequence to sequence transformer from [fairseq](https://github.com/pytorch/fairseq) for this work.
+We used a sequence to sequence transformer from [fairseq](https://github.com/pytorch/fairseq) for this work.
 
 More code and complete readme available soon.
 
