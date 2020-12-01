@@ -12,4 +12,4 @@ datasets not provided here, you can find them at:
 
 - [PreCo dataset](https://preschool-lab.github.io/PreCo/)
 
-[more coreference resources](https://github.com/gorka96/Coreference-Corpora-Resources) (for many languages, adds yours!)
+[more coreference resources](https://github.com/gorka96/Coreference-Corpora-Resources) (+20 languages, adds yours!)
