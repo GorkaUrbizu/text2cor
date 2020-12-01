@@ -6,8 +6,8 @@ Code and model available soon.
 
 datasets not provided, you can find them at:
 
--[ARRAU dataset](https://catalog.ldc.upenn.edu/LDC2013T22)
+- [ARRAU dataset](https://catalog.ldc.upenn.edu/LDC2013T22)
 
--[PreCo dataset](https://preschool-lab.github.io/PreCo/)
+- [PreCo dataset](https://preschool-lab.github.io/PreCo/)
 
 [more coreference resources (for many languages, adds yours!):](https://github.com/gorka96/Coreference-Corpora-Resources)
