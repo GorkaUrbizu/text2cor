@@ -80,8 +80,11 @@ fairseq-generate data-bin/text2cor_all_seq_bpe.bin --path checkpoints/transforme
 grep ^S outputs/output.txt | cut -f2- | sed -r 's/(@@ )|(@@ ?$)//g' > outputs/sequences.txt
 grep ^T outputs/output.txt | cut -f2- > outputs/target.txt
 grep ^H outputs/output.txt | cut -f3- > outputs/hypotheses.txt 
+```
 
-python3 joinByTab.py outputs/sequences.txt outputs/hypotheses.txt  utputs/test.pred
+###Post-processing
+```
+python3 output2conll.py outputs/sequences.txt outputs/target.txt outputs/hypotheses.txt outputs/test.pred
 ```
 You can see an (randomly choosen) example of the output of our model [here](https://github.com/gorka96/text2cor/blob/main/pred_example.txt).
 
