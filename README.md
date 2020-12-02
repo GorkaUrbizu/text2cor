@@ -19,22 +19,20 @@ datasets not provided here, you can find them at:
 
 
 ARRAU:
-
+```
 python3 mmax2conll.py
-
+```
 
 ### conll 2 src/trg:
-
+```
 python3 word2seq.py data/train_ARRAU_sen.conll data/train_ARRAU_seq
-
 python3 word2seqPreco.py data/preco.conll data/train_preco_seq
-
+```
 Test/dev:
-
+```
 python3 word2doc.py data/dev_ARRAU.conll data/dev_ARRAU
-
 python3 word2doc.py data/test_ARRAU.conll data/test_ARRAU
-
+```
 
 ## BPE
 
