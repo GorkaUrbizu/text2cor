@@ -86,7 +86,7 @@ grep ^H outputs/output.txt | cut -f3- > outputs/hypotheses.txt
 ```
 python3 output2conll.py outputs/sequences.txt outputs/target.txt outputs/hypotheses.txt outputs/test.pred
 ```
-You can see a random example of the output of our model [here](https://github.com/gorka96/text2cor/blob/main/pred_example.txt).
+You can see an example of the output of our model [here](https://github.com/gorka96/text2cor/blob/main/pred_example.txt).
 
 ## scorer
 ```
