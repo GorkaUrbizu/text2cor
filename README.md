@@ -13,9 +13,9 @@ datasets not provided here, you can find them at:
 [more coreference resources](https://github.com/gorka96/Coreference-Corpora-Resources)  (+20 languages, add yours!)
 
 
-# PREPROCESSING
+## PREPROCESSING
 
-###  mmax to conll
+### mmax to conll
 
 
 ARRAU:
@@ -36,7 +36,7 @@ python3 word2doc.py data/dev_ARRAU.conll data/dev_ARRAU
 python3 word2doc.py data/test_ARRAU.conll data/test_ARRAU
 ```
 
-## BPE
+### BPE
 
 ### train BPE
 ```
@@ -56,23 +56,23 @@ cat data/train_ARRAU_seq_bpe.src data/preco_seq_bpe.src > data/train_all_seq_bpe
 cat data/train_ARRAU_seq.trg data/preco_seq.trg > data/train_all_seq_bpe.
 ```
 
-## TRG split:
+### TRG split:
 
 ```
 sed 's/|/ | /g' data/train_ARRAU.trg > data/train_ARRAU_split.trg
 ```
 
-# FAIRSEQ
+## FAIRSEQ
 ```
 fairseq-preprocess --source-lang src --target-lang trg --trainpref data/train_all_seq_bpe --validpref data/dev_ARRAU_bpe --testpref data/test_ARRAU_bpe --destdir data-bin/text2cor_all_seq_bpe.bin --workers 8
 ```
 
-## Train the transformer model
+### Train the transformer model
 ```
 fairseq-train data-bin/text2cor_all_seq_bpe.bin --arch transformer_iwslt_de_en --optimizer adam --adam-betas '(0.9, 0.98)' --clip-norm 0.1 --lr 5e-4 --lr-scheduler inverse_sqrt --warmup-updates 4000 --dropout 0.3 --weight-decay 0.0001 --criterion label_smoothed_cross_entropy --label-smoothing 0.1 --no-epoch-checkpoints --num-workers 8 --max-epoch 10 --save-dir checkpoints/transformer_text2cor_all_seq_bpe --skip-invalid-size-inputs-valid-test --max-tokens 4096 --update-freq 8
 ```
 
-## inference 
+### Inference 
 
 ```
 fairseq-generate data-bin/text2cor_all_seq_bpe.bin --path checkpoints/transformer_text2cor_all_seq_bpe/checkpoint_best.pt --beam 5 --skip-invalid-size-inputs-valid-test > outputs/output.txt
@@ -82,7 +82,7 @@ grep ^T outputs/output.txt | cut -f2- > outputs/target.txt
 grep ^H outputs/output.txt | cut -f3- > outputs/hypotheses.txt
 ```
 
-# scorer
+## scorer
 ```
 ./scorer/scorer.pl all outputs/test.gold outputs/test.pred
 ```
