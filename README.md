@@ -2,7 +2,7 @@
 
 ### By: Gorka Urbizu Garmendia
 
-Sequence to Sequence Coreference Resolution for English, using a Transformer.
+[Sequence to Sequence Coreference Resolution](https://www.aclweb.org/anthology/2020.crac-1.5/) for English, using a Transformer.
 
 datasets not provided here, you can find them at:
 
@@ -13,7 +13,6 @@ datasets not provided here, you can find them at:
 [more coreference resources](https://github.com/gorka96/Coreference-Corpora-Resources)  (+20 languages, add yours!)
 
 
-
 # PREPROCESSING
 
 ###  mmax to conll
@@ -21,15 +20,10 @@ datasets not provided here, you can find them at:
 ARRAU:
 python3 mmax2conll.py
 
-(fout = train dev test)
-
 PreCo:
 already at conll format
 
 ### conll 2 src/trg:
-
-Train: all #1199779 seq
-4+ sen, 100+ words, 1/4 of them (unlest shortest or full doc)
 
 python3 word2seq.py data/train_ARRAU_sen.conll data/train_ARRAU_seq
 
