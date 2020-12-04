@@ -58,7 +58,7 @@ cat data/train_ARRAU_seq.trg data/preco_seq.trg > data/train_all_seq_bpe.
 
 ### TRG split:
 
-_  (1|(2 ) _  1)  _  (3)  _  -->  _  (1  |  (2)  _  1)  _  (3)  _
+_  (1|(2) _  1)  _  (3)  _  -->  _  (1  |  (2)  _  1)  _  (3)  _
 
 ```
 sed 's/|/ | /g' data/train_ARRAU.trg > data/train_ARRAU_split.trg
