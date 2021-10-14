@@ -38,6 +38,8 @@ python3 word2doc.py data/test_ARRAU.conll data/test_ARRAU
 
 ### BPE
 
+https://github.com/rsennrich/subword-nmt
+
 ### train BPE
 ```
 subword-nmt learn-bpe -s 16000 < BPE/en_raw.txt > BPE/en16k.bpe
@@ -64,7 +66,10 @@ _  (1|(2) _  1)  _  (3)  _  -->  _  (1  |  (2)  _  1)  _  (3)  _
 sed 's/|/ | /g' data/train_ARRAU.trg > data/train_ARRAU_split.trg
 ```
 
-## FAIRSEQ
+## FAIRSEQ (CLI)
+
+https://github.com/pytorch/fairseq
+
 ```
 fairseq-preprocess --source-lang src --target-lang trg --trainpref data/train_all_seq_bpe --validpref data/dev_ARRAU_bpe --testpref data/test_ARRAU_bpe --destdir data-bin/text2cor_all_seq_bpe.bin --workers 8
 ```
